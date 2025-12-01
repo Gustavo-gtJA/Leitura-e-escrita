@@ -24,5 +24,7 @@ public class LeituraEscritaAPP {
         contatoRepository.contato = contato;
         contatoRepository.gravar();
 
+        contatoRepository.exibirContato();
+
     }
 }
