@@ -12,12 +12,16 @@ public class LeituraEscritaAPP {
         Scanner leitor = new Scanner(System.in);
 
         Contato contato = new Contato();
+
         System.out.println("Digite o nome do contato: ");
         contato.nome = leitor.nextLine();
+
         System.out.println("Digite o email do contato: ");
         contato.email = leitor.nextLine();
+
         System.out.println("Digite o telefone do contato: ");
         contato.telefone = leitor.nextLine();
+
         contato.id = UUID.randomUUID().toString();
 
         ContatoRepository contatoRepository = new ContatoRepository();

@@ -28,11 +28,16 @@ public class ContatoRepository {
         try {
             List<String>linhas = Files.readAllLines(arquivo);
 
-            int contador = 0;
-            while(contador<linhas.size()){
-                System.out.println(linhas.get(contador));
-                contador++;
+            for(String linha : linhas){
+                String[] linhaContato = linha.split(",");
+                System.out.println(linha);
             }
+// exemplo com while
+            //int contador = 0;
+           // while(contador<linhas.size()){
+           //     System.out.println(linhas.get(contador));
+           //     contador++;
+          //  }
             System.out.println("Contato exibido com sucesso!");
         } catch (IOException e) {
             throw new RuntimeException(e);
