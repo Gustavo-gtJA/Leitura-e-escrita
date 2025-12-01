@@ -29,7 +29,12 @@ public class ContatoRepository {
             List<String>linhas = Files.readAllLines(arquivo);
 
             for(String linha : linhas){
-                String[] linhaContato = linha.split(",");
+                String[] linhaContato = linha.split(";");
+                System.out.println("Nome: "+ linhaContato[1]);
+                System.out.println("Telefone: "+ linhaContato[2]);
+                System.out.println("Email: "+ linhaContato[3]);
+                System.out.println("-----------------------------------");
+
                 System.out.println(linha);
             }
 // exemplo com while
